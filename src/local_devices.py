@@ -284,7 +284,16 @@ class Light_sources_laser_class():
         "coupling":Coupling.SMF
     }
 
-
+    # used in 323_EPHYS1
+    coherent_red={
+        "name":"Coherent red",
+        "device_type":"Laser",
+        "manufacturer":Organization.COHERENT_SCIENTIFIC,
+        "wavelength":640,
+        "wavelength_unit":SizeUnit.NM,
+        "serial_number": "M171024016",
+        "coupling":Coupling.SMF
+    }
     #Laser(**Oxxius_Lasers_473_1)
 
 class Patch_class():
