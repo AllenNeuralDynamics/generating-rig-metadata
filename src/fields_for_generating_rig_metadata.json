@@ -1,0 +1,106 @@
+{
+    "rig_id": "323_EPHYS3_2024-05-11",
+    "output_folder": "F:\\Test\\RigMetadata",
+    "current_box":"323_EPHYS3",
+    "behavior_computer_name":"W10DT713883",
+    "ephys_computer_name":"W10DT713881",
+    "mouse_platform":"tube",
+    "stimulus_devices":["speaker","reward_delivery"],
+    "light_sources_laser":["Oxxius_Lasers_473_1","Oxxius_Lasers_473_2","Oxxius_Lasers_561_1","Oxxius_Lasers_561_2","Oxxius_Lasers_638_1","Oxxius_Lasers_638_2"],
+    "light_sources_led":[
+        {
+            "name":"IR LED 850 Left",
+            "serial_number":"M00940086",
+            "model_name":"IR_LED_850"
+        },
+        {
+            "name":"IR LED 850 Right",
+            "serial_number":"M00937010",
+            "model_name":"IR_LED_850"
+        },
+        {
+            "name":"IR LED 850 Body",
+            "serial_number":"M00915785",
+            "model_name":"IR_LED_850"
+        }
+    ],
+    "modalities":["ECEPHYS","BEHAVIOR","BEHAVIOR_VIDEOS"],
+    "daqs":["harp_behavior_board","harp_sound_board","harp_clock_board","harp_lickety_split_left","harp_lickety_split_right","neuropixels_basestation","optogenetics_nidaq_6002"],
+    "daq_computer_name":["behavior_computer_name","behavior_computer_name","behavior_computer_name","behavior_computer_name","behavior_computer_name","ephys_computer_name","ephys_computer_name"],
+    "water_calibration_file":"C:\\Users\\xinxin.yin\\Documents\\ForagingSettings\\WaterCalibration_1.json",
+    "laser_calibration_file":"C:\\Users\\xinxin.yin\\Documents\\ForagingSettings\\LaserCalibration_1.json",
+    "notes":"None",
+    "probes":[
+        {
+            "probe_name":"ProbeA",
+            "port_index":3,
+            "probe_model":"NP2_SINGLE_SHANK",
+            "probe_serial_number":"20403319394",
+            "manipulator_serial_number":"46099"
+        },
+        {
+            "probe_name":"ProbeB",
+            "port_index":4,
+            "probe_model":"NP2_SINGLE_SHANK",
+            "probe_serial_number":"20403311244",
+            "manipulator_serial_number":"46107"
+        }
+    ],
+    "stick_microscopes":[
+        {
+            "camera_name":"Probe Camera 1",
+            "camera_target":"BRAIN_SURFACE",
+            "serial_number":"22433201",
+            "camera_model":"BFS_U3_120S4C",
+            "lens_model":"stick_lens",
+            "computer_name":"ephys_computer_name"
+        },
+        {
+            "camera_name":"Probe Camera 2",
+            "camera_target":"BRAIN_SURFACE",
+            "serial_number":"22474619",
+            "camera_model":"BFS_U3_120S4C",
+            "lens_model":"stick_lens",
+            "computer_name":"ephys_computer_name"
+        }],
+    "high_speed_cameras":[
+        {
+            "camera_name":"Face Bottom",
+            "camera_target":"FACE_BOTTOM",
+            "serial_number":"23045805",
+            "camera_model":"BFS_U3_04S2M",
+            "lens_model":"bottom_camera_lens",
+            "computer_name":"behavior_computer_name",
+            "filter_model":"M35"
+        },
+        {
+            "camera_name":"Face Side Left",
+            "camera_target":"FACE_SIDE_LEFT",
+            "serial_number":"23033717",
+            "camera_model":"BFS_U3_04S2M",
+            "lens_model":"side_camera_lens",
+            "computer_name":"behavior_computer_name",
+            "filter_model":"LP715_37"
+        },
+        {
+            "camera_name":"Face Side Right",
+            "camera_target":"FACE_SIDE_RIGHT",
+            "serial_number":"23033710",
+            "camera_model":"BFS_U3_04S2M",
+            "lens_model":"side_camera_lens",
+            "computer_name":"behavior_computer_name",
+            "filter_model":"LP715_37"
+        },
+        {
+            "camera_name":"Body",
+            "camera_target":"BODY",
+            "serial_number":"22511912",
+            "camera_model":"BFS_U3_04S2M",
+            "lens_model":"body_camera_lens",
+            "computer_name":"behavior_computer_name",
+            "filter_model":"M35"
+        }
+    ]  
+    
+
+}
