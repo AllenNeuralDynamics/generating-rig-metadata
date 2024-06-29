@@ -1,5 +1,5 @@
 {
-    "rig_id": "323_EPHYS3_2024-05-11",
+    "rig_id": "323_EPHYS3_2024-06-29",
     "output_folder": "F:\\Test\\RigMetadata",
     "current_box":"323_EPHYS3",
     "behavior_computer_name":"W10DT713883",
@@ -33,17 +33,24 @@
     "probes":[
         {
             "probe_name":"ProbeA",
-            "port_index":3,
+            "port_index":1,
             "probe_model":"NP2_SINGLE_SHANK",
-            "probe_serial_number":"20403319394",
-            "manipulator_serial_number":"46099"
+            "probe_serial_number":"20403319954",
+            "manipulator_serial_number":"46122"
         },
         {
             "probe_name":"ProbeB",
-            "port_index":4,
+            "port_index":2,
             "probe_model":"NP2_SINGLE_SHANK",
-            "probe_serial_number":"20403311244",
-            "manipulator_serial_number":"46107"
+            "probe_serial_number":"20403311154",
+            "manipulator_serial_number":"46800"
+        },
+        {
+            "probe_name":"ProbeC",
+            "port_index":3,
+            "probe_model":"NP2_SINGLE_SHANK",
+            "probe_serial_number":"20403319384",
+            "manipulator_serial_number":"46099"
         }
     ],
     "stick_microscopes":[
