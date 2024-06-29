@@ -1,6 +1,6 @@
 {
     "rig_id": "323_EPHYS3_2024-06-29",
-    "output_folder": "F:\\Test\\RigMetadata",
+    "output_folder": "C:\\Users\\svc_aind_ephys\\Documents\\ForagingSettings\\rig_metadata",
     "current_box":"323_EPHYS3",
     "behavior_computer_name":"W10DT713883",
     "ephys_computer_name":"W10DT713881",
@@ -27,8 +27,8 @@
     "modalities":["ECEPHYS","BEHAVIOR","BEHAVIOR_VIDEOS"],
     "daqs":["harp_behavior_board","harp_sound_board","harp_clock_board","harp_lickety_split_left","harp_lickety_split_right","neuropixels_basestation","optogenetics_nidaq_6002"],
     "daq_computer_name":["behavior_computer_name","behavior_computer_name","behavior_computer_name","behavior_computer_name","behavior_computer_name","ephys_computer_name","ephys_computer_name"],
-    "water_calibration_file":"C:\\Users\\xinxin.yin\\Documents\\ForagingSettings\\WaterCalibration_1.json",
-    "laser_calibration_file":"C:\\Users\\xinxin.yin\\Documents\\ForagingSettings\\LaserCalibration_1.json",
+    "water_calibration_file":"C:\\Users\\svc_aind_ephys\\Documents\\ForagingSettings\\WaterCalibration_1.json",
+    "laser_calibration_file":"C:\\Users\\svc_aind_ephys\\Documents\\ForagingSettings\\LaserCalibration_1.json",
     "notes":"None",
     "probes":[
         {
