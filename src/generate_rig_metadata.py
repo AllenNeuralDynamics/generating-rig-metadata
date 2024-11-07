@@ -39,7 +39,7 @@ from aind_data_schema.components.devices import (
 )
 from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.modalities import Modality
-from aind_data_schema_models.organizations import Organization,NewScaleTechnologies
+from aind_data_schema_models.organizations import Organization,_New_Scale_Technologies
 from aind_data_schema_models.units import FrequencyUnit, PowerUnit, SizeUnit
 from local_devices import Cameras_class,Filter_class,Lens_class,Probes_class,Stimulus_devices_class,daq_class,Mouse_platform_class,Light_sources_laser_class,Light_sources_led_class
 
@@ -427,7 +427,7 @@ class generate_rig_metadata:
                 manipulator=Manipulator(
                     name=probe['probe_name']+' Manipulator',
                     device_type="Manipulator",
-                    manufacturer=NewScaleTechnologies(),
+                    manufacturer=_New_Scale_Technologies(),
                     serial_number=probe['manipulator_serial_number'],
                 ),
                 probes=ephys_probe,
@@ -456,5 +456,5 @@ class generate_rig_metadata:
         
 
 if __name__ == '__main__':
-    generate_rig_metadata(json_file=r'E:\GitHub\CTLUT-metadata-gen\src\CTLUT_metadata_gen\fields_for_generating_rig_metadata.json')
+    generate_rig_metadata(json_file=r'C:\Users\xinxin.yin\Downloads\fields_for_generating_rig_metadata2.json')
     
