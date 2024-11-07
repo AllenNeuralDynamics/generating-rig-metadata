@@ -34,7 +34,7 @@ from aind_data_schema.components.devices import (
 )
 from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.modalities import Modality
-from aind_data_schema_models.organizations import Organization,NewScaleTechnologies
+from aind_data_schema_models.organizations import Organization,_New_Scale_Technologies
 from aind_data_schema_models.units import FrequencyUnit, PowerUnit, SizeUnit
 
 class Probes_class():
