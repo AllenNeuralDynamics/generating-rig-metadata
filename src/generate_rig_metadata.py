@@ -371,14 +371,23 @@ class generate_rig_metadata:
         for ind, camera in enumerate(self.obj['high_speed_cameras']):
             current_camera=self._get_camera(camera)
             current_lens=self._get_lens(camera['lens_model'])
-            current_filter=self._get_filter(camera['filter_model'])
-            self.high_speed_cameras.append(CameraAssembly(
+
+            if camera['filter_model']=='None':
+                self.high_speed_cameras.append(CameraAssembly(
                 name=camera['camera_name'],
                 camera=current_camera,
                 camera_target=getattr(CameraTarget,camera['camera_target']),
-                lens=current_lens,
-                filter=current_filter
-            ))
+                lens=current_lens
+                ))
+            else:
+                current_filter=self._get_filter(camera['filter_model'])
+                self.high_speed_cameras.append(CameraAssembly(
+                    name=camera['camera_name'],
+                    camera=current_camera,
+                    camera_target=getattr(CameraTarget,camera['camera_target']),
+                    lens=current_lens,
+                    filter=current_filter
+                ))
 
     
     def _get_filter(self,filter_model):

@@ -30,7 +30,8 @@ from aind_data_schema.components.devices import (
     ProbePort,
     Coupling,
     Lamp,
-    LightEmittingDiode
+    LightEmittingDiode,
+    LickSensorType
 )
 from aind_data_schema_models.harp_types import HarpDeviceType
 from aind_data_schema_models.modalities import Modality
@@ -57,7 +58,6 @@ class Cameras_class():
             'data_interface': 'USB',
             'manufacturer': Organization.FLIR,
             'model': 'Blackfly S BFS-U3-120S4C',
-            'max_frame_rate': 31,
             'sensor_width':4000,
             'sensor_height':3000,
             'sensor_format':"1/1.7",
@@ -70,7 +70,6 @@ class Cameras_class():
             "data_interface":"USB",
             "model":"Blackfly S BFS-U3-04S2M",
             "manufacturer":Organization.FLIR,
-            "max_frame_rate":522,
             "sensor_width":720,
             "sensor_height":540,
             "sensor_format":"1/2.9",
@@ -170,6 +169,20 @@ class Solenoid_valve_class:
     }
     # Device(**solenoid_valve)
 
+class Lick_sensor_class:
+    '''Lick sensor models'''
+    Janelia_lick_detector={
+        "device_type":"Lick Sensor",
+        "name":"Janelia Lick Sensor",
+    },
+    # Device(**Janelia_lick_detector)
+
+    AIND_lick_dectector={
+        "device_type":"Lick Sensor",
+        "name":"AIND Lick Sensor",
+    }
+
+
 class Lickspout_class:
     '''Lickspout models'''
     lickspout_left={
@@ -190,6 +203,7 @@ class Lickspout_class:
                 ]
         ),
         "solenoid_valve":Device(**Solenoid_valve_class.solenoid_valve),
+        "lick_sensor":Device(**Lick_sensor_class.AIND_lick_dectector),
     }
 
     lickspout_right={
@@ -210,6 +224,7 @@ class Lickspout_class:
                 ]
         ),
         "solenoid_valve":Device(**Solenoid_valve_class.solenoid_valve),
+        "lick_sensor":Device(**Lick_sensor_class.AIND_lick_dectector),
     }
 
     #RewardSpout(**lickspout_left)
