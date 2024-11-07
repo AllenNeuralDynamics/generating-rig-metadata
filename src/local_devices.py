@@ -323,6 +323,14 @@ class Light_sources_led_class():
         "notes":"This LED is used for camera illumination"
     }
 
+    IR_LED_810={
+        "model":'M810L3',
+        "wavelength":810,
+        "wavelength_unit":SizeUnit.NM,
+        "manufacturer":Organization.THORLABS,
+        "notes":"This LED is used for camera illumination"
+    }
+
     Opetogenetics_LED_460={
         "model":'Dual-Optogenetics-LED-Blue',
         "wavelength":460,
