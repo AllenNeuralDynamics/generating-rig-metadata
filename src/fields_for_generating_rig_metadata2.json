@@ -11,12 +11,12 @@
         {
             "name":"IR LED 810",
             "serial_number":"TBD",
-            "model_name":"M810L5"
+            "model_name":"IR_LED_810"
         },
         {
             "name":"IR LED 810",
             "serial_number":"TBD",
-            "model_name":"M810L5"
+            "model_name":"IR_LED_810"
         }
     ],
     "modalities":["ECEPHYS","BEHAVIOR","BEHAVIOR_VIDEOS"],

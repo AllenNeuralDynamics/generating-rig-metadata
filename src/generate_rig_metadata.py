@@ -1,5 +1,6 @@
 
 import json
+import os
 from datetime import datetime
 from aind_data_schema_models.organizations import Organization
 from aind_data_schema.core.rig import Rig
@@ -165,6 +166,11 @@ class generate_rig_metadata:
         if not 'laser_calibration_file' in self.obj:
             self.opto_calibration =[]
             return
+        
+        if not os.path.exists(self.obj['laser_calibration_file']):
+            self.opto_calibration =[]
+            return
+        
         # load the optogenetic calibration json
         self.OptoCalibrationResults=json.load(open(self.obj['laser_calibration_file']))
 
@@ -465,5 +471,5 @@ class generate_rig_metadata:
         
 
 if __name__ == '__main__':
-    generate_rig_metadata(json_file=r'C:\Users\xinxin.yin\Downloads\fields_for_generating_rig_metadata2.json')
+    generate_rig_metadata(json_file=r'E:\GitHub\generating-rig-metadata\src\fields_for_generating_rig_metadata2.json')
     
