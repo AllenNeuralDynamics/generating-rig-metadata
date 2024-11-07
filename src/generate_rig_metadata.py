@@ -117,7 +117,7 @@ class generate_rig_metadata:
 
         self.rig = Rig(
             rig_id=self.obj['rig_id'],
-            modification_date=datetime.strptime(self.obj['rig_id'][-10:], "%Y-%m-%d").date(),
+            modification_date=datetime.strptime(self.obj['rig_id'].split('_')[-1], "%Y%m%d").date(),
             modalities=self.modalities,
             ephys_assemblies=self.ephys_assemblies,
             cameras=self.high_speed_cameras,
