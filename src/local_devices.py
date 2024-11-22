@@ -63,6 +63,7 @@ class Cameras_class():
             'sensor_format':"1/1.7",
             'sensor_format_unit':"inches",
             'chroma':"Color",
+            'frame_rate':"500",
         }
 
     BFS_U3_04S2M = {
@@ -75,6 +76,7 @@ class Cameras_class():
             "sensor_format":"1/2.9",
             "sensor_format_unit":"inches",
             "chroma":"Monochrome",
+            'frame_rate':"500",
         }
     # Camera(**BFS_U3_120S4C)
     # Camera(**BFS_U3_04S2M)

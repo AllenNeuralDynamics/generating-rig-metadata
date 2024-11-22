@@ -471,5 +471,5 @@ class generate_rig_metadata:
         
 
 if __name__ == '__main__':
-    generate_rig_metadata(json_file=r'E:\GitHub\generating-rig-metadata\src\fields_for_generating_rig_metadata2.json')
+    generate_rig_metadata(json_file=r'E:\GitHub\generating-rig-metadata\src\fields_for_generating_rig_metadata.json')
     
