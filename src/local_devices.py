@@ -166,23 +166,27 @@ class Solenoid_valve_class:
     '''Solenoid valve models'''
     solenoid_valve={
         "name":"Solenoid Valve",
-        "manufacturer":Organization.OTHER,
+        "manufacturer":Organization.from_name('The Lee Company'),
+        "model":'LHDA1233415H',
         "device_type":"Solenoid Valve"
     }
     # Device(**solenoid_valve)
 
 class Lick_sensor_class:
     '''Lick sensor models'''
-    Janelia_lick_detector={
-        "device_type":"Lick Sensor",
-        "name":"Janelia Lick Sensor",
-    },
-    # Device(**Janelia_lick_detector)
-
     AIND_lick_dectector={
         "device_type":"Lick Sensor",
         "name":"AIND Lick Sensor",
     }
+
+    Janelia_lick_detector={
+        "device_type":"Lick Sensor",
+        "name":"Janelia Lick Sensor",
+    }
+    
+
+
+    # Device(**Janelia_lick_detector)
 
 
 class Lickspout_class:
