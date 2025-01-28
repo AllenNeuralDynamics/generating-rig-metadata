@@ -182,6 +182,7 @@ class Lick_sensor_class:
     Janelia_lick_detector={
         "device_type":"Lick Sensor",
         "name":"Janelia Lick Sensor",
+        "manufacturer":Organization.JANELIA,
     }
     
 
@@ -365,8 +366,8 @@ class Stimulus_devices_class():
     '''Stimulus devices models'''
     speaker={
         "name":"Speaker",
-        "manufacturer":Organization.OTHER,
-        "model":"Speaker"
+        "manufacturer":Organization.TYMPHANY,
+        "model":"XT25SC90-04"
     }
     # Speaker(**speaker)
 
