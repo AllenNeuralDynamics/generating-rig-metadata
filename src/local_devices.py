@@ -210,7 +210,7 @@ class Lickspout_class:
                 ]
         ),
         "solenoid_valve":Device(**Solenoid_valve_class.solenoid_valve),
-        "lick_sensor":Device(**Lick_sensor_class.AIND_lick_dectector),
+        "lick_sensor":Device(**Lick_sensor_class.Janelia_lick_detector),
     }
 
     lickspout_right={
@@ -231,7 +231,7 @@ class Lickspout_class:
                 ]
         ),
         "solenoid_valve":Device(**Solenoid_valve_class.solenoid_valve),
-        "lick_sensor":Device(**Lick_sensor_class.AIND_lick_dectector),
+        "lick_sensor":Device(**Lick_sensor_class.Janelia_lick_detector),
     }
 
     #RewardSpout(**lickspout_left)
@@ -265,7 +265,7 @@ class Light_sources_laser_class():
         "name":"Oxxius Laser 561-1",
         "device_type":"Laser",
         "manufacturer":Organization.OXXIUS,
-        "wavelength":473,
+        "wavelength":561,
         "wavelength_unit":SizeUnit.NM,
         "model": "L6CC-CSB-2422",
         "serial_number": "LNC-00771",
@@ -276,7 +276,7 @@ class Light_sources_laser_class():
         "name":"Oxxius Laser 561-2",
         "device_type":"Laser",
         "manufacturer":Organization.OXXIUS,
-        "wavelength":473,
+        "wavelength":561,
         "wavelength_unit":SizeUnit.NM,
         "model": "L6CC-CSB-2422",
         "serial_number": "LNC-00771",
@@ -288,7 +288,7 @@ class Light_sources_laser_class():
         "name":"Oxxius Laser 638-1",
         "device_type":"Laser",
         "manufacturer":Organization.OXXIUS,
-        "wavelength":473,
+        "wavelength":638,
         "wavelength_unit":SizeUnit.NM,
         "model": "L6CC-CSB-2422",
         "serial_number": "LNC-00771",
@@ -299,13 +299,23 @@ class Light_sources_laser_class():
         "name":"Oxxius Laser 638-2",
         "device_type":"Laser",
         "manufacturer":Organization.OXXIUS,
-        "wavelength":473,
+        "wavelength":638,
         "wavelength_unit":SizeUnit.NM,
         "model": "L6CC-CSB-2422",
         "serial_number": "LNC-00771",
         "coupling":Coupling.SMF
     }
 
+
+    Coherent_Lasers_640_1={
+        "name":"Coherent Laser 640-1",
+        "device_type":"Laser",
+        "manufacturer":Organization.COHERENT_SCIENTIFIC,
+        "wavelength":640,
+        "wavelength_unit":SizeUnit.NM,
+        "serial_number": "M171024016",
+        "coupling":Coupling.SMF
+    }
     # used in 323_EPHYS1
     coherent_red={
         "name":"Coherent red",
