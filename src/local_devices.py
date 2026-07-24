@@ -237,7 +237,45 @@ class Lickspout_class:
     #RewardSpout(**lickspout_left)
     #RewardSpout(**lickspout_right)
 
+    @staticmethod
+    def lickspout_left_params(lick_sensor_name="Janelia_lick_detector"):
+        '''Return the left lickspout params with the selected lick sensor'''
+        params=dict(Lickspout_class.lickspout_left)
+        params["lick_sensor"]=Device(**getattr(Lick_sensor_class,lick_sensor_name))
+        return params
+
+    @staticmethod
+    def lickspout_right_params(lick_sensor_name="Janelia_lick_detector"):
+        '''Return the right lickspout params with the selected lick sensor'''
+        params=dict(Lickspout_class.lickspout_right)
+        params["lick_sensor"]=Device(**getattr(Lick_sensor_class,lick_sensor_name))
+        return params
+
 class Light_sources_laser_class():
+    Oxxius_Lasers_473_behavior_1={
+        "name":"Oxxius Laser 473-1",
+        "device_type":"Laser",
+        "manufacturer":Organization.OXXIUS,
+        "wavelength":473,
+        "wavelength_unit":SizeUnit.NM,
+        "model": "L4CC-CSB-2222",
+        "serial_number": "LNC-1388",
+        "coupling":Coupling.SMF
+    }
+
+
+    Oxxius_Lasers_473_behavior_2={
+        "name":"Oxxius Laser 473-2",
+        "device_type":"Laser",
+        "manufacturer":Organization.OXXIUS,
+        "wavelength":473,
+        "wavelength_unit":SizeUnit.NM,
+        "model": "L4CC-CSB-2222",
+        "serial_number": "LNC-1388",
+        "coupling":Coupling.SMF
+    }
+
+
     Oxxius_Lasers_473_1={
         "name":"Oxxius Laser 473-1",
         "device_type":"Laser",
@@ -387,6 +425,19 @@ class Stimulus_devices_class():
         "reward_spouts":[RewardSpout(**Lickspout_class.lickspout_left),RewardSpout(**Lickspout_class.lickspout_right)]
     }
     # RewardDelivery(**reward_delivery)
+
+    @staticmethod
+    def build_reward_delivery(lick_sensor_name="Janelia_lick_detector"):
+        '''Build reward_delivery params with the selected lick sensor
+        (e.g. "AIND_lick_dectector" or "Janelia_lick_detector")'''
+        return {
+            "device_type":"Reward delivery",
+            "stage_type":MotorizedStage(**Motorstage_class.newscale),
+            "reward_spouts":[
+                RewardSpout(**Lickspout_class.lickspout_left_params(lick_sensor_name)),
+                RewardSpout(**Lickspout_class.lickspout_right_params(lick_sensor_name)),
+            ]
+        }
 
 
 

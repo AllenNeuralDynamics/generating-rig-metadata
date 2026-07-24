@@ -75,6 +75,8 @@ class generate_rig_metadata:
         else:
             self.output_folder = output_folder
 
+        os.makedirs(self.output_folder, exist_ok=True)
+
         self._mapper()
         self.generate_rig_metadata()
         
@@ -345,7 +347,8 @@ class generate_rig_metadata:
         self.stimulus_devices=[]
         for stimulus_device in self.obj['stimulus_devices']:
             if 'reward_delivery' in stimulus_device:
-                reward_delivery_params=getattr(Stimulus_devices_class,stimulus_device)
+                lick_sensor_name=self.obj.get('lick_sensor','Janelia_lick_detector')
+                reward_delivery_params=Stimulus_devices_class.build_reward_delivery(lick_sensor_name)
                 self.stimulus_devices.append(RewardDelivery(**reward_delivery_params))
             elif 'speaker' in stimulus_device:
                 speaker_params=getattr(Stimulus_devices_class,stimulus_device)
@@ -358,7 +361,7 @@ class generate_rig_metadata:
         '''
         self.stick_microscopes=[]
 
-        for ind, camera in enumerate(self.obj['stick_microscopes']):
+        for ind, camera in enumerate(self.obj.get('stick_microscopes', [])):
             current_camera=self._get_camera(camera)
             current_lens=self._get_lens(camera['lens_model'])
             self.stick_microscopes.append(CameraAssembly(
@@ -435,7 +438,7 @@ class generate_rig_metadata:
         '''
         self.ephys_assemblies=[]
 
-        for ind_probe, probe in enumerate(self.obj['probes']):
+        for ind_probe, probe in enumerate(self.obj.get('probes', [])):
             ephys_probe=self._get_ephys_probe(probe=probe)
             self.ephys_assemblies.append(EphysAssembly(
                 name='Probe Assembly '+str(ind_probe+1),
@@ -471,6 +474,6 @@ class generate_rig_metadata:
         
 
 if __name__ == '__main__':
-    generate_rig_metadata(json_file=r'C:\Users\svc_aind_ephys\Documents\rig_metadata\323_Ephys3\fields_for_generating_rig_metadata-20250404.json')
+    generate_rig_metadata(json_file=r'C:\Users\svc_aind_behavior\Documents\GitHub\generating-rig-metadata\src\fields_for_generating_rig_metadata_11D.json')
     
     
