@@ -273,7 +273,7 @@ class generate_rig_metadata:
                 device_name = 'Lick spout Right'
             description= f'Water calibration for {device_name}. The input is the valve open time in second and the output is the volume of water delivered in microliters.'
             self.water_calibration.append(Calibration(
-                calibration_date=datetime.strptime(self.RecentWaterCalibrationDate, '%Y-%m-%d').date(),
+                calibration_date=datetime.strptime(self.RecentWaterCalibrationDate[side], '%Y-%m-%d').date(),
                 device_name=device_name,
                 description=description ,
                 input= {'valve open time (s)':self.parsed_watercalibration[side]['X']},
@@ -284,15 +284,18 @@ class generate_rig_metadata:
         '''
         Parse the water calibration information from the json file
         '''
-        sorted_dates = sorted(self.WaterCalibrationResults.keys(), key=self._custom_sort_key)
-        self.RecentWaterCalibration=self.WaterCalibrationResults[sorted_dates[-1]]
-        self.RecentWaterCalibrationDate=sorted_dates[-1]
-
         sides=self.name_mapper['sides']
         self.parsed_watercalibration={}
+        self.RecentWaterCalibrationDate={}
         for side in sides:
+            # pick the most recent date that actually contains this side's calibration
+            dates_with_side=[date for date in self.WaterCalibrationResults if side in self.WaterCalibrationResults[date]]
+            if not dates_with_side:
+                continue
+            recent_date=sorted(dates_with_side, key=self._custom_sort_key)[-1]
+            self.RecentWaterCalibrationDate[side]=recent_date
             self.parsed_watercalibration[side]={}
-            sorted_X,sorted_Y=PlotWaterCalibration._GetWaterCalibration(self,self.WaterCalibrationResults,self.RecentWaterCalibrationDate,side)
+            sorted_X,sorted_Y=PlotWaterCalibration._GetWaterCalibration(self,self.WaterCalibrationResults,recent_date,side)
             self.parsed_watercalibration[side]['X']=sorted_X
             self.parsed_watercalibration[side]['Y']=sorted_Y
 
