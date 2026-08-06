@@ -210,7 +210,7 @@ class Lickspout_class:
                 ]
         ),
         "solenoid_valve":Device(**Solenoid_valve_class.solenoid_valve),
-        "lick_sensor":Device(**Lick_sensor_class.Janelia_lick_detector),
+        "lick_sensor":Device(**Lick_sensor_class.AIND_lick_dectector),
     }
 
     lickspout_right={
@@ -231,7 +231,7 @@ class Lickspout_class:
                 ]
         ),
         "solenoid_valve":Device(**Solenoid_valve_class.solenoid_valve),
-        "lick_sensor":Device(**Lick_sensor_class.Janelia_lick_detector),
+        "lick_sensor":Device(**Lick_sensor_class.AIND_lick_dectector),
     }
 
     #RewardSpout(**lickspout_left)
@@ -326,6 +326,28 @@ class Light_sources_laser_class():
         "serial_number": "M171024016",
         "coupling":Coupling.SMF
     }
+
+    coherent_473_1={
+        "name":"Coherent blue 473-1",
+        "device_type":"Laser",
+        "manufacturer":Organization.COHERENT_SCIENTIFIC,
+        "wavelength":473,
+        "wavelength_unit":SizeUnit.NM,
+        "serial_number": "unknown",
+        "coupling":Coupling.SMF
+    }
+
+    coherent_473_2={
+        "name":"Coherent blue 473-2",
+        "device_type":"Laser",
+        "manufacturer":Organization.COHERENT_SCIENTIFIC,
+        "wavelength":473,
+        "wavelength_unit":SizeUnit.NM,
+        "serial_number": "unknown",
+        "coupling":Coupling.SMF
+    }
+
+
     #Laser(**Oxxius_Lasers_473_1)
 
 class Patch_class():

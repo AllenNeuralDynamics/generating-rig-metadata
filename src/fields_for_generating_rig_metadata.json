@@ -1,13 +1,13 @@
 {
 
-    "rig_id": "323_EPHYS3_2025-01-28",
+    "rig_id": "323_EPHYS3_2026-06-24",
     "output_folder": "C:\\Users\\svc_aind_ephys\\Documents\\ForagingSettings\\rig_metadata",
     "current_box":"323_EPHYS3",
     "behavior_computer_name":"W10DT713883",
     "ephys_computer_name":"W10DT713881",
     "mouse_platform":"tube",
     "stimulus_devices":["speaker","reward_delivery"],
-    "light_sources_laser":["Oxxius_Lasers_473_1","Oxxius_Lasers_473_2","Oxxius_Lasers_561_1","Oxxius_Lasers_561_2","Oxxius_Lasers_638_1","Oxxius_Lasers_638_2"],
+    "light_sources_laser":["Oxxius_Lasers_473_1","Oxxius_Lasers_473_2","Oxxius_Lasers_561_1","Oxxius_Lasers_561_2","Oxxius_Lasers_638_1","Oxxius_Lasers_638_2","coherent_473_1","coherent_473_2"],
     "light_sources_led":[
         {
             "name":"IR LED 850 Left",
@@ -33,19 +33,27 @@
     "notes":"None",
     "probes":[
         {
-            "probe_name":"ProbeB",
-            "port_index":3,
+            "probe_name":"ProbeA",
+            "port_index":1,
             "probe_model":"NP2_MULTI_SHANK",
-            "probe_serial_number":"22420011052",
+            "probe_serial_number":"22420013952",
             "manipulator_serial_number":"46800"
         },
         {
-            "probe_name":"ProbeA",
-            "port_index":2,
+            "probe_name":"ProbeB",
+            "port_index":3,
             "probe_model":"NP2_MULTI_SHANK",
-            "probe_serial_number":"22420013764",
+            "probe_serial_number":"22420013822",
+            "manipulator_serial_number":"46801"
+        },
+        {
+            "probe_name":"ProbeC",
+            "port_index":1,
+            "probe_model":"NP2_QUAD_BASE",
+            "probe_serial_number":"23328408402",
             "manipulator_serial_number":"46099"
         }
+
     ],
     "stick_microscopes":[
         {
